@@ -141,6 +141,11 @@ vim.o.timeoutlen = 300
 vim.o.splitright = true
 vim.o.splitbelow = true
 
+-- Configure how many spaces are in a tab
+vim.opt.tabstop = 4 -- Number of spaces a <Tab> counts for
+vim.opt.shiftwidth = 4 -- Number of spaces for each indentation level
+vim.opt.expandtab = true -- Convert tabs to spaces
+vim.opt.softtabstop = 4 -- Number of spaces for <Tab> in insert mode
 -- Sets how neovim will display certain whitespace characters in the editor.
 --  See `:help 'list'`
 --  and `:help 'listchars'`
@@ -974,7 +979,7 @@ require('lazy').setup({
   --  Uncomment any of the lines below to enable them (you will need to restart nvim).
   --
   -- require 'kickstart.plugins.debug',
-  -- require 'kickstart.plugins.indent_line',
+  require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',
   -- require 'kickstart.plugins.autopairs',
   -- require 'kickstart.plugins.neo-tree',
